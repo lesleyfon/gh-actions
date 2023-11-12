@@ -12,11 +12,11 @@ jobs:
                   node -v
                   npm -v
 
-    parallel-jon-macos:
+    parallel-job-macos:
         runs-on: macos-latest
         steps:
             - name: View SW version
-              run: sw-vers
+              run: sw_vers
     dependant-job:
         runs-on: windows-latest
         # You can add needs if you require a jobs to only run on certain paramters
