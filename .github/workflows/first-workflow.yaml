@@ -1,4 +1,5 @@
 name: First Workflow
+# This is the even the workflows below will run on
 on: [push]
 
 jobs:
@@ -12,10 +13,15 @@ jobs:
                   node -v
                   npm -v
 
+    # A job runner
     parallel-job-macos:
+        # specifies the OS the workflow should run on
         runs-on: macos-latest
+        # The steps to run on the workflow
         steps:
+            #Name of a job
             - name: View SW version
+              # Command to run
               run: sw_vers
     dependant-job:
         runs-on: windows-latest
@@ -24,7 +30,4 @@ jobs:
         needs: run-shell-commands
         steps:
             - name: Windows Jobs "Echo string"
-              run: Write-Output "Windoes String"
-
-            - name: Workflow command does not exist
-              run: doesnotexist
+              run: Write-Output "Windows String"
