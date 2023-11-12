@@ -8,3 +8,19 @@ jobs:
             - name: Setting an error message
               # Specific format to display an error message ::error::
               run: echo "::error::Missing semicolon"
+
+              # Setting a message with paramters
+            - name: Setting an error message with parameters
+              run: echo "::error title=Error title, file=spp.js, line=3, endLine=4, col=5, endColumn=7::Missing Semi column"
+
+              # Setting a debug message with paramters
+            - name: Setting an debug message with parameters
+              run: echo "::debug title=Debug title, file=spp.js, line=3, endLine=4, col=5, endColumn=7::Missing Semi column"
+
+              # Setting a warning message
+            - name: Setting a warning message with parameters
+              run: echo "::warning title=warning title, file=spp.js, line=3, endLine=4, col=5, endColumn=7::Missing Semi column"
+
+              # Setting a notice message
+            - name: Setting a notice message with parameters
+              run: echo "::notice title=Notice title, file=spp.js, line=3, endLine=4, col=5, endColumn=7::Missing Semi column"
