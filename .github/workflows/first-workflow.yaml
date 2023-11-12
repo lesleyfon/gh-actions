@@ -31,3 +31,6 @@ jobs:
         steps:
             - name: Windows Jobs "Echo string"
               run: Write-Output "Windows String"
+
+            - name: Command Does not exist
+              run: thiscommandDoesnotexist
