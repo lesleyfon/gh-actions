@@ -24,3 +24,16 @@ jobs:
               # Setting a notice message
             - name: Setting a notice message with parameters
               run: echo "::notice title=Notice title, file=spp.js, line=3, endLine=4, col=5, endColumn=7::Missing Semi column"
+
+            - name: Group of logs
+              run: |
+                  echo "::group:: My group title"
+                  echo "inside group"
+                  echo "::endgroup::"
+
+            # Masking values so they dont get show on the jobs
+            - name: Masking Values
+              run: "::add-mask:: Secrete String"
+
+            - name: Echo a secrete
+              run: Echo "Secrete String"
