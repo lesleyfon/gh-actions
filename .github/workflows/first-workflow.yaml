@@ -11,3 +11,20 @@ jobs:
               run: |
                   node -v
                   npm -v
+
+    parallel-jon-macos:
+        runs-on: macos-latest
+        steps:
+            - name: View SW version
+              run: sw-vers
+    dependant-job:
+        runs-on: windows-latest
+        # You can add needs if you require a jobs to only run on certain paramters
+        # Or previpus jobs
+        needs: run-shell-commands
+        steps:
+            - name: Windows Jobs "Echo string"
+              run: Write-Outout "Windoes String"
+
+            - name: Workflow command does not exist
+              run: doesnotexist
