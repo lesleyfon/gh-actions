@@ -29,6 +29,9 @@ jobs:
               run: |
                   echo "::group:: My group title"
                   echo "inside group"
+                  echo "Some other sting to be echoed in the group"
+                  echo "Hello world"
+                  echo Notice
                   echo "::endgroup::"
 
             # Masking values so they dont get show on the jobs
