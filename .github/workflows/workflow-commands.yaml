@@ -33,7 +33,7 @@ jobs:
 
             # Masking values so they dont get show on the jobs
             - name: Masking Values
-              run: "::add-mask:: Secrete String"
+              run: echo "::add-mask::Secrete String"
 
             - name: Echo a secrete
-              run: Echo "Secrete String"
+              run: echo "Secrete String"
