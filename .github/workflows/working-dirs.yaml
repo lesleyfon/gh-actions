@@ -28,9 +28,9 @@ jobs:
                   echo $GITHUB_SHA
                   echo $GITHUB_REPOSITORY
             # Change a working dir
-            - name: Change working Directory
-              working-directory: /d/a/
-              run: pwd
+            # - name: Change working Directory
+            #   working-directory: /d/a/
+            #   run: pwd
 
     display-working-dirs-info-windows-overide:
         runs-on: windows-latest
