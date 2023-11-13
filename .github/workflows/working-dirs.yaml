@@ -27,6 +27,10 @@ jobs:
                   ls -a
                   echo $GITHUB_SHA
                   echo $GITHUB_REPOSITORY
+            # Change a working dir
+            - name: Change working Directory
+              working-directory: /home/runner
+              run: pwd
 
     display-working-dirs-info-windows-overide:
         runs-on: windows-latest
@@ -37,10 +41,11 @@ jobs:
         steps:
             - name: Display working Directory and List Files - Windows
               #
-              #dir
+              #when using windows shell, to read from env,you add a $env before the variable
               run: |
                   Get-Location
                   dir
+
                   echo $env:GITHUB_SHA
                   echo $env:GITHUB_REPOSITORY
                   echo $env:GITHUB_WORKSPACE
