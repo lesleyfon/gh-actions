@@ -12,8 +12,9 @@ jobs:
                   mkdir test-folder
                   echo $GITHUB_SHA
                   echo $GITHUB_REPOSITORY
-                  ehco $GITHUB_WORKSPACE
+
     # Windows jobs
+    # ehco $GITHUB_WORKSPACE
     display-working-dirs-info-windows:
         runs-on: windows-latest
         steps:
@@ -23,4 +24,3 @@ jobs:
                   dir
                   echo $env:GITHUB_SHA
                   echo $env:GITHUB_REPOSITORY
-                  ehco $env:GITHUB_WORKSPACE
