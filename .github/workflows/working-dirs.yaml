@@ -27,22 +27,3 @@ jobs:
                   dir
                   echo $env:GITHUB_SHA
                   echo $env:GITHUB_REPOSITORY
-
-    display-working-dirs-info-windows-overide:
-        runs-on: windows-latest
-        # Overide shell
-        defaults:
-            run:
-                shell: pwsh
-        steps:
-            - name: Display working Directory and List Files - Windows
-              # Get-Location
-              #dir
-              run: |
-                  pwd
-                  ls -a
-                  mkdir test-folder
-                  ls -a
-                  echo $env:GITHUB_SHA
-                  echo $env:GITHUB_REPOSITORY
-                  ehco $env:GITHUB_WORKSPACE
