@@ -25,10 +25,8 @@ jobs:
               run: |
                   pwd 
                   ls -a
-                  mkdir test-folder
-                  ls -a
-                  echo $env:GITHUB_SHA
-                  echo $env:GITHUB_REPOSITORY
+                  echo $GITHUB_SHA
+                  echo $GITHUB_REPOSITORY
 
     display-working-dirs-info-windows-overide:
         runs-on: windows-latest
@@ -45,4 +43,4 @@ jobs:
                   dir
                   echo $env:GITHUB_SHA
                   echo $env:GITHUB_REPOSITORY
-                  ehco $env:GITHUB_WORKSPACE
+                  echo $env:GITHUB_WORKSPACE
