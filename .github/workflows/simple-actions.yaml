@@ -1,0 +1,23 @@
+name: Simple Action
+on: [push]
+
+jobs:
+    simple-action:
+        # OS
+        runs-on: ubuntu-latest
+        steps:
+            # Name of jobs
+            - name: Simple JS Action
+              # the ID would match the variable being pulled in later steps. So for example greet should match what something like {{ steps.greet }}
+              id: greet
+              # We use the key work "uses" when we need to reference an action
+              # username/repository@sha
+              uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
+              # An action can receive inputs.
+              # We do this by using the with keyword
+              # The name of the will be documented in the actions
+              with:
+                  who-to-greet: Lesley
+            - name: Log Greeting Time
+
+              run: echo "${{ steps.greet.outputs.time }}"
