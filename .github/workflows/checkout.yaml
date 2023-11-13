@@ -23,5 +23,5 @@ jobs:
               run: ls -a
             - name: Checkout with actions from market place
               uses: actions/checkout@v3
-            - name: List files before
+            - name: List files after
               run: ls -a
